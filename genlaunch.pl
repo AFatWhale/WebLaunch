@@ -10,10 +10,7 @@ $file = <>;
 chomp($file);
 open(GAMEFILE, '>', $name);
 print GAMEFILE "<?php\n";
-print GAMEFILE "exec(\"START ";
-print GAMEFILE $file;
-print GAMEFILE "\"";
-print GAMEFILE ");";
-print GAMEFILE "\n?>"; 
+print GAMEFILE "exec(\"START ", $file, "\");\n";
+print GAMEFILE "?>"; 
 
 
